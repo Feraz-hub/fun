@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Story Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> <!-- Fancy Font -->
+</head>
+<body>
+    <div class="container">
+        <div id="intro-screen" class="intro-container">
+            <h1>Select Your Storyline</h1>
+            <p>Choose between three thrilling adventures: Crime, Family Drama, or Adventure. The choice you make will determine your path.</p>
+            <div class="choices-container">
+                <button id="crimeButton" class="choice-button crime" onclick="startStory('crime')">
+                    Crime Story
+                </button>
+                <button id="dramaButton" class="choice-button drama" onclick="startStory('drama')">
+                    Family Drama
+                </button>
+                <button id="adventureButton" class="choice-button adventure" onclick="startStory('adventure')">
+                    Adventure Story
+                </button>
+            </div>
+        </div>
+
+        <div id="game" class="hidden">
+            <div id="story" class="story-container">
+                <p id="story-text"></p>
+                <div id="magnifying-glass" class="hidden">
+                    <img src="https://img.icons8.com/ios-filled/100/ffffff/magnifying-glass.png" alt="Magnifying Glass Icon" class="magnifying-icon">
+                    <h2 id="story-title"></h2>
+                </div>
+            </div>
+            <div id="choices" class="choices-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
